@@ -67,9 +67,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-.gitignore
 .idea/
-pom.xml
-src/
 target/
 testSpringBoot.iml
