@@ -1,13 +1,18 @@
 package springboot.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import springboot.model.Website;
+import springboot.persistence.WebsiteRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class WebsitesService {
+    @Autowired
+    private WebsiteRepository websiteRepository;
+
     private static List<Website> items;
 
     public WebsitesService() {
@@ -24,6 +29,6 @@ public class WebsitesService {
     }
 
     public List<Website> findAll() {
-        return items;
+        return websiteRepository.findAll();
     }
 }
