@@ -20,7 +20,6 @@ public class StackController {
     //@ResponseBody
     @RequestMapping
     public List<Website> getListOfProviders() {
-        websitesService = new WebsitesService();
         return websitesService.findAll();
     }
 }
